@@ -9,9 +9,8 @@
 
 **Edited by Tom Manshreck**
 
-Unit tests are a critical tool for keeping developers productive and reducing defects in code. Although they can be easy to write for simple code, writing them becomes difficult as code becomes more complex.
 
-单元测试是保持开发人员生产力和减少代码缺陷的重要工具。尽管对于简单的代码来说，单元测试很容易编写，但当代码变得更加复杂时，编写单元测试就变得困难了。
+[ 单元测试是保持开发人员生产力和减少代码缺陷的重要工具。尽管对于简单的代码来说，单元测试很容易编写，但当代码变得更加复杂时，编写单元测试就变得困难了。](# "Unit tests are a critical tool for keeping developers productive and reducing defects in code. Although they can be easy to write for simple code, writing them becomes difficult as code becomes more complex.")
 
 For example, imagine trying to write a test for a function that sends a request to an external server and then stores the response in a database. Writing a handful of tests might be doable with some effort. But if you need to write hundreds or thousands of tests like this, your test suite will likely take hours to run, and could become flaky due to issues like random network failures or tests overwriting one another’s data.
 

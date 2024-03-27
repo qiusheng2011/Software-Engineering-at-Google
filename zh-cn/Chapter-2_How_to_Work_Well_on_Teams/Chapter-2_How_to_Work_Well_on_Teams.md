@@ -15,7 +15,7 @@ Because this chapter is about the cultural and social aspects of software engine
 
 People are inherently imperfect—we like to say that humans are mostly a collection of intermittent bugs. But before you can understand the bugs in your coworkers, you need to understand the bugs in yourself. We’re going to ask you to think about your own reactions, behaviors, and attitudes—and in return, we hope you gain some real insight into how to become a more efficient and successful software engineer who spends less energy dealing with people-related problems and more time writing great code.
 
-人天生是不完美的——我们常说，人类大多是一个个不同缺点的组成集合。但是，在你了解同事身上的缺点之前，你需要了解自己身上的缺点。我们将要求你反思自己的反应、行为和态度——作为回报，我们希望你能够真正了解如何成为一名更高效、更成功的软件工程师，减少处理与人相关的问题的精力，花更多的时间编写牛逼的代码。
+人天生是不完美的——我们常说，人类大多是一个个不同缺点的组成集合。但是，在你了解同事身上的缺点之前，你需要了解自己身上的缺点。我们将要求你反思自己的反应、行为和态度——作为回报，我们希望你能够真正了解如何成为一名更高效、更成功的软件工程师，减少处理与人相关的问题的精力，花更多的时间编写好的的代码。
 
 The critical idea in this chapter is that software development is a team endeavor. And to succeed on an engineering team—or in any other creative collaboration—you need to reorganize your behaviors around the core principles of humility, respect, and trust.
 
@@ -71,7 +71,7 @@ And what about Michael Jordan?
 
 It’s the same story. We idolized him, but the fact is that he didn’t win every basketball game by himself. His true genius was in the way he worked with his team. The team’s coach, Phil Jackson, was extremely clever, and his coaching techniques are legendary.
 
-这是同一个故事。我们崇拜他，但事实是他并不是一个人赢得每一场篮球比赛的。他真正的牛逼在于他与团队合作的方式。这支球队的教练Phil Jackson非常聪明，他的教练技术堪称传奇。
+这是同一个故事。我们崇拜他，但事实是他并不是一个人赢得每一场篮球比赛的。他真正的好的在于他与团队合作的方式。这支球队的教练Phil Jackson非常聪明，他的教练技术堪称传奇。
 
 He recognized that one player alone never wins a championship, and so he assembled an entire “dream team” around MJ. This team was a well-oiled machine—at least as impressive as Michael himself.
 
@@ -148,7 +148,7 @@ First of all, how do you even know whether you’re on the right track?
 
 Imagine you’re a bicycledesign enthusiast, and one day you get a brilliant idea for a completely new way to design a gear shifter. You order parts and proceed to spend weeks holed up in your garage trying to build a prototype. When your neighbor— also a bike advocate—asks you what’s up, you decide not to talk about it. You don’t want anyone to know about your project until it’s absolutely perfect. Another few months go by and you’re having trouble making your prototype work correctly. But because you’re working in secrecy, it’s impossible to solicit advice from your mechanically inclined friends.
 
-想象一下，你是一个自行车设计爱好者，有一天你有了一个牛逼的想法，可以用一种全新的方式来设计变速器。你订购零件，然后花数周时间躲在车库里，尝试制造一个原型。当你的邻居——也是自行车倡导者——问你怎么了，你决定闭口不谈。你不想让任何人知道你的项目，直到它绝对完美。又过几个月，你在让原型运行时遇到了麻烦。但因为你是在保密的情况下工作，所以不可能征求你那些有机械专家朋友的意见。
+想象一下，你是一个自行车设计爱好者，有一天你有了一个好的的想法，可以用一种全新的方式来设计变速器。你订购零件，然后花数周时间躲在车库里，尝试制造一个原型。当你的邻居——也是自行车倡导者——问你怎么了，你决定闭口不谈。你不想让任何人知道你的项目，直到它绝对完美。又过几个月，你在让原型运行时遇到了麻烦。但因为你是在保密的情况下工作，所以不可能征求你那些有机械专家朋友的意见。
 
 Then, one day your neighbor pulls his bike out of his garage with a radical new gear- shifting mechanism. Turns out he’s been building something very similar to your invention, but with the help of some friends down at the bike shop. At this point, you’re exasperated. You show him your work. He points out that your design had some simple flaws—ones that might have been fixed in the first week if you had shown him. There are a number of lessons to learn here.
 
@@ -158,7 +158,7 @@ Then, one day your neighbor pulls his bike out of his garage with a radical new 
 
 If you keep your great idea hidden from the world and refuse to show anyone anything until the implementation is polished, you’re taking a huge gamble. It’s easy to make fundamental design mistakes early on. You risk reinventing wheels.2 And you forfeit the benefits of collaboration, too: notice how much faster your neighbor moved by working with others? This is why people dip their toes in the water before jumping in the deep end: you need to make sure that you’re working on the right thing, you’re doing it correctly, and it hasn’t been done before. The chances of an early misstep are high. The more feedback you solicit early on, the more you lower this risk.3 Remember the tried-and-true mantra of “Fail early, fail fast, fail often.”
 
-如果你对世界隐瞒你的牛逼想法，并在未完美之前拒绝向任何人展示，那么你就是在进行一场下注巨大的赌博。早期很容易犯基本的设计错误。你冒着重新发明轮子的风险。[^2]而且你也失去了协作的好处：注意到你的邻居通过与他人合作而效率有多高？这就是人们在跳入深水区之前将脚趾浸入水中的原因：你需要确保你在做正确的事情，你在做正确的事情，而且以前从未做过。早期失误的可能性很高。你越早征求反馈，这种风险就越低。[^3]记住“早失败、快失败、经常失败”这句经得起考验的至理名言。
+如果你对世界隐瞒你的好的想法，并在未完美之前拒绝向任何人展示，那么你就是在进行一场下注巨大的赌博。早期很容易犯基本的设计错误。你冒着重新发明轮子的风险。[^2]而且你也失去了协作的好处：注意到你的邻居通过与他人合作而效率有多高？这就是人们在跳入深水区之前将脚趾浸入水中的原因：你需要确保你在做正确的事情，你在做正确的事情，而且以前从未做过。早期失误的可能性很高。你越早征求反馈，这种风险就越低。[^3]记住“早失败、快失败、经常失败”这句经得起考验的至理名言。
 
 Early sharing isn’t just about preventing personal missteps and getting your ideas vetted. It’s also important to strengthen what we call the bus factor of your project.
 
@@ -344,7 +344,7 @@ Ego manifests itself in many ways, and a lot of the time, it can get in the way 
 
 自我表现在很多方面，很多时候，它会妨碍你的生产力，拖累你。下面是Hamming演讲中的另一个精彩故事，完美地说明了这一点（重点是我们的）：
 
-    *John Tukey 几乎总是穿得很随便。他会走进一个重要会议，过了很长一段时间，另一个人才意识到这是一个牛逼的人，他最好听从。长期以来，约翰不得不克服这种敌意。这是白费力气！我没说你应该服从；我说，“顺从的外表让你走得更远。”如果你选择以任何一种方式来主张你的自我，"我要用我的方式来做"，你就会在整个职业生涯中付出确定的小代价。而这，在整个一生中，加起来就是一个大量的不必要的麻烦。[…]通过意识到你必须使用这个系统并研究如何让这个系统完成你的工作，你学会了如何让这个系统适应你的愿望。或者你可以在你的一生中，作为一场小型的、不宣而战的战争，稳扎稳打。*
+    *John Tukey 几乎总是穿得很随便。他会走进一个重要会议，过了很长一段时间，另一个人才意识到这是一个好的的人，他最好听从。长期以来，约翰不得不克服这种敌意。这是白费力气！我没说你应该服从；我说，“顺从的外表让你走得更远。”如果你选择以任何一种方式来主张你的自我，"我要用我的方式来做"，你就会在整个职业生涯中付出确定的小代价。而这，在整个一生中，加起来就是一个大量的不必要的麻烦。[…]通过意识到你必须使用这个系统并研究如何让这个系统完成你的工作，你学会了如何让这个系统适应你的愿望。或者你可以在你的一生中，作为一场小型的、不宣而战的战争，稳扎稳打。*
 
 #### Learn to give and take criticism 学会给出和接受批评
 
