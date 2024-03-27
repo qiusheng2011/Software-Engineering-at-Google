@@ -483,11 +483,11 @@ We talk more about the specific test-mail-submit process for each shard below.
 
 -----
 
-##### Cattle Versus Pets  牛与宠物
+##### Cattle Versus Pets  家畜与宠物
 
 We often use the “cattle and pets” analogy when referring to individual machines in a distributed computing environment, but the same principles can apply to changes within a codebase.
 
-当提到分布式计算环境中的单个机器时，我们经常使用 "牛和宠物 "的比喻，但同样的原则可以适用于代码库中的变化。
+当提到分布式计算环境中的单个机器时，我们经常使用 "家畜和宠物 "的比喻，但同样的原则可以适用于代码库中的变化。
 
 At Google, as at most organizations, typical changes to the codebase are handcrafted by individual engineers working on specific features or bug fixes. Engineers might spend days or weeks working through the creation, testing, and review of a single change. They come to know the change intimately, and are proud when it is finally committed to the main repository. The creation of such a change is akin to owning and raising a favorite pet.
 
@@ -495,11 +495,11 @@ At Google, as at most organizations, typical changes to the codebase are handcra
 
 In contrast, effective handling of LSCs requires a high degree of automation and produces an enormous number of individual changes. In this environment, we’ve found it useful to treat specific changes as cattle: nameless and faceless commits that might be rolled back or otherwise rejected at any given time with little cost unless the entire herd is affected. Often this happens because of an unforeseen problem not caught by tests, or even something as simple as a merge conflict.
 
-相比之下，有效地处理LSC需要高度的自动化，并产生大量的单独变化。在这种环境下，我们发现把特定的修改当作牛来对待是很有用的：无名无姓的提交，在任何时候都可能被回滚或以其他方式拒绝，除非整个牛群受到影响，否则代价很小。通常情况下，这种情况发生的原因是测试没有发现的意外问题，甚至是像合并冲突这样简单的事情。
+相比之下，有效地处理LSC需要高度的自动化，并产生大量的单独变化。在这种环境下，我们发现把特定的修改当作家畜来对待是很有用的：无名无姓的提交，在任何时候都可能被回滚或以其他方式拒绝，除非整个家畜群受到影响，否则代价很小。通常情况下，这种情况发生的原因是测试没有发现的意外问题，甚至是像合并冲突这样简单的事情。
 
 With a “pet” commit, it can be difficult to not take rejection personally, but when working with many changes as part of a large-scale change, it’s just the nature of the job. Having automation means that tooling can be updated and new changes generated at very low cost, so losing a few cattle now and then isn’t a problem.
 
-对于一个 "宠物" 提交，不把拒绝放在心上是很难的，但当作为大规模变革的一部分而处理许多变化时，这只是工作的性质。拥有自动化意味着工具可以更新，并以非常低的成本产生新的变化，所以偶尔失去几头牛并不是什么问题。
+对于一个 "宠物" 提交，不把拒绝放在心上是很难的，但当作为大规模变革的一部分而处理许多变化时，这只是工作的性质。拥有自动化意味着工具可以更新，并以非常低的成本产生新的变化，所以偶尔失去几头家畜并不是什么问题。
 
 -----
 

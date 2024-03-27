@@ -28,7 +28,7 @@ This chapter is about how this simple concept—just give me the hardware to run
 本章讲述的是这个简单的概念--如何为我提供硬件--如何组成一个系统，随着你的组织的发展和壮大而生存和扩展。本章有点长，因为主题很复杂，分为四个部分：
 
 - 第518页的 "驯服计算环境"涵盖了谷歌是如何得出这个问题的解决方案的，并解释了CaaS的一些关键概念。
-- 第523页的 "为托管计算编写软件"展示了托管计算解决方案如何影响工程师编写软件。我们相信，"牛，而不是宠物"/灵活的调度模式是谷歌在过去15年成功的根本，也是软件工程师工具箱中的重要工具。
+- 第523页的 "为托管计算编写软件"展示了托管计算解决方案如何影响工程师编写软件。我们相信，"家畜，而不是宠物"/灵活的调度模式是谷歌在过去15年成功的根本，也是软件工程师工具箱中的重要工具。
 - 第530页的 "CaaS随时间和规模的变化"更深入地探讨了谷歌在组织成长和发展过程中对计算架构的各种选择是如何发挥的一些经验。
 - 最后，第535页的 "选择计算服务"主要是献给那些将决定在其组织中使用何种计算服务的工程师。
 
@@ -210,15 +210,15 @@ As discussed in “Automated scheduling” on page 519, in the Borg world, the s
 
 The move from “the engineer has to manually monitor each of the 100 tasks and attend to them if broken” to “if something goes wrong with one of the tasks, the system is architected so that the load is picked up by others, while the automated scheduler kills it and reinstantiates it on a new machine” has been described many years later through the analogy of “pets versus cattle.”[^7]
 
-从 "工程师必须手动监控100个任务中的每一个，并在出现问题时对其进行处理 "到 "如果其中一个任务出现问题，系统会被设计成由其他任务来承担，而自动化系统会将其杀死并在新的机器上重新执行"，这一转变在许多年后通过 "宠物与牛"的比喻来描述。
+从 "工程师必须手动监控100个任务中的每一个，并在出现问题时对其进行处理 "到 "如果其中一个任务出现问题，系统会被设计成由其他任务来承担，而自动化系统会将其杀死并在新的机器上重新执行"，这一转变在许多年后通过 "宠物与家畜"的比喻来描述。
 
 If your server is a pet, when it’s broken, a human comes to look at it (usually in a panic), understand what went wrong, and hopefully nurse it back to health. It’s difficult to replace. If your servers are cattle, you name them replica001 to replica100, and if one fails, automation will remove it and provision a new one in its place. The distinguishing characteristic of “cattle” is that it’s easy to stamp out a new instance of the job in question—it doesn’t require manual setup and can be done fully automatically. This allows for the self-healing property described earlier—in the case of a failure, automation can take over and replace the unhealthy job with a new, healthy one without human intervention. Note that although the original metaphor spoke of servers (VMs), the same applies to containers: if you can stamp out a new version of the container from an image without human intervention, your automation will be able to autoheal your service when required.
 
-如果你的服务器是一只宠物，当它坏了时，一个人会来看它（通常是惊慌失措），了解出了什么问题，并希望护理它恢复健康。很难更换。如果你的服务器是牛群，你可以将它们命名为replica001到replica100，如果其中一个服务器出现故障，自动化将删除它并在其位置提供一个新的服务器。“牛群”的独特之处在于，它可以很容易地删除相关作业的新实例--它不需要手动设置，可以完全自动完成。这就实现了前面描述的自愈特性。在发生故障的情况下，自动化可以接管不健康的工作，并用一个新的、健康的工作替换它，而无需人工干预。请注意，尽管最初的隐喻谈到了服务器（VM），但同样适用于容器：如果你可以在无需人工干预的情况下从镜像中删除容器的新版本，那么你的自动化将能够在需要时自动修复你的服务。
+如果你的服务器是一只宠物，当它坏了时，一个人会来看它（通常是惊慌失措），了解出了什么问题，并希望护理它恢复健康。很难更换。如果你的服务器是家畜群，你可以将它们命名为replica001到replica100，如果其中一个服务器出现故障，自动化将删除它并在其位置提供一个新的服务器。“家畜群”的独特之处在于，它可以很容易地删除相关作业的新实例--它不需要手动设置，可以完全自动完成。这就实现了前面描述的自愈特性。在发生故障的情况下，自动化可以接管不健康的工作，并用一个新的、健康的工作替换它，而无需人工干预。请注意，尽管最初的隐喻谈到了服务器（VM），但同样适用于容器：如果你可以在无需人工干预的情况下从镜像中删除容器的新版本，那么你的自动化将能够在需要时自动修复你的服务。
 
 If your servers are pets, your maintenance burden will grow linearly, or even superlinearly, with the size of your fleet, and that’s a burden that no organization should accept lightly. On the other hand, if your servers are cattle, your system will be able to return to a stable state after a failure, and you will not need to spend your weekend nursing a pet server or container back to health.
 
-如果你的服务器是宠物，你的维护负担将随着你的集群规模线性增长，甚至是超线性增长，这是任何组织都不应轻视的负担。另一方面，如果你的服务器是牛群，你的系统将能够在故障后恢复到一个稳定的状态，你将不需要花周末的时间来护理一个宠物服务器或容器恢复健康。
+如果你的服务器是宠物，你的维护负担将随着你的集群规模线性增长，甚至是超线性增长，这是任何组织都不应轻视的负担。另一方面，如果你的服务器是家畜群，你的系统将能够在故障后恢复到一个稳定的状态，你将不需要花周末的时间来护理一个宠物服务器或容器恢复健康。
 
 Having your VMs or containers be cattle is not enough to guarantee that your system will behave well in the face of failure, though. With 200 machines, one of the replicas being killed by Borg is quite likely to happen, possibly more than once, and each time it extends the overall duration by 50 minutes (or however much processing time was lost). To deal with this gracefully, the architecture of the processing needs to be different: instead of statically assigning the work, we instead divide the entire set of one million documents into, say, 1,000 chunks of 1,000 documents each. Whenever a worker is finished with a particular chunk, it reports the results, and picks up another. This means that we lose at most one chunk of work on a worker failure, in the case when the worker dies after finishing the chunk, but before reporting it. This, fortunately, fits very well with the data-processing architecture that was Google’s standard at that time: work isn’t assigned equally to the set of workers at the start of the computation; it’s dynamically assigned during the overall processing in order to account for workers that fail.
 
@@ -230,7 +230,7 @@ Similarly, for systems serving user traffic, you would ideally want a container 
 
 To summarize: treating your containers or servers as cattle means that your service can get back to a healthy state automatically, but additional effort is needed to make sure that it can function smoothly while experiencing a moderate rate of failures.
 
-总而言之：将容器或服务器视为“牛群”意味着你的服务可以自动恢复到正常状态，但还需要付出额外的努力，以确保它能够在遇到中等故障率的情况下顺利运行。
+总而言之：将容器或服务器视为“家畜群”意味着你的服务可以自动恢复到正常状态，但还需要付出额外的努力，以确保它能够在遇到中等故障率的情况下顺利运行。
 
 > [^6]: The scheduler does not do this arbitrarily, but for concrete reasons (like the need to update the kernel, or a disk going bad on the machine, or a reshuffle to make the overall distribution of workloads in the datacenter bin-packed better). However, the point of having a compute service is that as a software author, I should neither know nor care why regarding the reasons this might happen.
 >
@@ -238,7 +238,7 @@ To summarize: treating your containers or servers as cattle means that your serv
 >
 > [^7]: The “pets versus cattle” metaphor is attributed to Bill Baker by Randy Bias and it’s become extremely popular as a way to describe the “replicated software unit” concept. As an analogy, it can also be used to describe concepts other than servers; for example, see Chapter 22.
 >
-> 7 "宠物与牛群"的比喻是由Randy Bias归功于Bill Baker的，它作为描述 "复制的软件单元 "概念的一种方式，已经变得非常流行。作为一个比喻，它也可以用来描述服务器以外的概念；例如，见第22章。
+> 7 "宠物与家畜群"的比喻是由Randy Bias归功于Bill Baker的，它作为描述 "复制的软件单元 "概念的一种方式，已经变得非常流行。作为一个比喻，它也可以用来描述服务器以外的概念；例如，见第22章。
 
 ### Batch Versus Serving 批量作业与服务作业
 
@@ -290,7 +290,7 @@ However, there are also multiple serving applications that do not naturally fit 
 
 One common theme in the previous description focused on *state* as a source of issues when trying to treat jobs like cattle.[^12] Whenever you replace one of your cattle jobs, you lose all the in-process state (as well as everything that was on local storage, if the job is moved to a different machine). This means that the in-process state should be treated as transient, whereas “real storage” needs to occur elsewhere.
 
-在前面的描述中，有一个共同的主题集中在*状态*上，当试图像对待牛一样对待作业时，*状态*是问题的来源。每当你替换你的一个牛的作业时，你会失去所有的进程中的状态（以及所有在本地存储的东西，如果作业被转移到不同的机器上）。这意味着进程内状态应被视为瞬态，而“真实存储”需要发生在其他地方。
+在前面的描述中，有一个共同的主题集中在*状态*上，当试图像对待家畜一样对待作业时，*状态*是问题的来源。每当你替换你的一个家畜的作业时，你会失去所有的进程中的状态（以及所有在本地存储的东西，如果作业被转移到不同的机器上）。这意味着进程内状态应被视为瞬态，而“真实存储”需要发生在其他地方。
 
 The simplest way of dealing with this is extracting all storage to an external storage system. This means that anything that should survive past the scope of serving a single request (in the serving job case) or processing one chunk of data (in the batch case) needs to be stored off machine, in durable, persistent storage. If all your local state is immutable, making your application failure resistant should be relatively painless.
 
@@ -298,11 +298,11 @@ The simplest way of dealing with this is extracting all storage to an external s
 
 Unfortunately, most applications are not that simple. One natural question that might come to mind is, “How are these durable, persistent storage solutions implemented are *they* cattle?” The answer should be “yes.” Persistent state can be managed by cattle through state replication. On a different level, RAID arrays are an analogous concept; we treat disks as transient (accept the fact one of them can be gone) while still maintaining state. In the servers world, this might be realized through multiple replicas holding a single piece of data and synchronizing to make sure every piece of data is replicated a sufficient number of times (usually 3 to 5). Note that setting this up correctly is difficult (some way of consensus handling is needed to deal with writes), and so Google developed a number of specialized storage solutions[^13] that were enablers for most applications adopting a model where all state is transient.
 
-不幸的是，大多数应用并不那么简单。可能会想到的一个自然而然问题是："这些持久的存储解决方案是如何实现的—它们是*牛*吗？" 答案应该是 "是的"。牛可以通过状态复制来管理持久状态。在不同的层面上，RAID阵列是一个类似的概念；我们将磁盘视为暂时的（接受其中一个可以消失的事实），同时仍保持主要状态。在服务器世界中，这可以通过多个副本来实现，多个副本保存一个数据段并进行同步，以确保每个数据段都被复制足够的次数（通常为3到5次）。请注意，正确设置此选项很困难（需要某种一致性处理方式来处理写操作），因此Google开发了许多专门的存储解决方案13，这些解决方案是采用所有状态都是瞬态的模型的大多数应用程序的推动者。
+不幸的是，大多数应用并不那么简单。可能会想到的一个自然而然问题是："这些持久的存储解决方案是如何实现的—它们是*家畜*吗？" 答案应该是 "是的"。家畜可以通过状态复制来管理持久状态。在不同的层面上，RAID阵列是一个类似的概念；我们将磁盘视为暂时的（接受其中一个可以消失的事实），同时仍保持主要状态。在服务器世界中，这可以通过多个副本来实现，多个副本保存一个数据段并进行同步，以确保每个数据段都被复制足够的次数（通常为3到5次）。请注意，正确设置此选项很困难（需要某种一致性处理方式来处理写操作），因此Google开发了许多专门的存储解决方案13，这些解决方案是采用所有状态都是瞬态的模型的大多数应用程序的推动者。
 
 Other types of local storage that cattle can use covers “re-creatable” data that is held locally to improve serving latency. Caching is the most obvious example here: a cache is nothing more than transient local storage that holds state in a transient location, but banks on the state not going away all the time, which allows for better performance characteristics on average. A key lesson for Google production infrastructure has been to provision the cache to meet your latency goals, but provision the core application for the total load. This has allowed us to avoid outages when the cache layer was lost because the noncached path was provisioned to handle the total load (although with higher latency). However, there is a clear trade-off here: how much to spend on the redundancy to mitigate the risk of an outage when cache capacity is lost.
 
-牛可以使用的其他类型的本地存储包括本地保存的“可重新创建”数据，以改善服务延迟。缓存是这里最明显的例子：缓存只不过是在一个短暂的位置上保存状态的本地存储，但却依赖于该状态不会一直消失，这使得平均性能特征更好。谷歌生产基础设施的一个关键经验是，配置缓存以满足你的延迟要求，但为总负载配置核心应用程序。这使得我们能够在缓存层丢失时避免故障，因为非缓存路径的配置能够处理总的负载（尽管延迟更高）。然而，这里有一个明显的权衡：当缓存容量丢失时，要在冗余上花多少钱才能减轻故障的风险。
+家畜可以使用的其他类型的本地存储包括本地保存的“可重新创建”数据，以改善服务延迟。缓存是这里最明显的例子：缓存只不过是在一个短暂的位置上保存状态的本地存储，但却依赖于该状态不会一直消失，这使得平均性能特征更好。谷歌生产基础设施的一个关键经验是，配置缓存以满足你的延迟要求，但为总负载配置核心应用程序。这使得我们能够在缓存层丢失时避免故障，因为非缓存路径的配置能够处理总的负载（尽管延迟更高）。然而，这里有一个明显的权衡：当缓存容量丢失时，要在冗余上花多少钱才能减轻故障的风险。
 
 In a similar vein to caching, data might be pulled in from external storage to local in the warm-up of an application, in order to improve request serving latency.
 
@@ -314,7 +314,7 @@ One more case of using local storage—this time in case of data that’s writte
 
 > [^12]: Note that, besides distributed state, there are other requirements to setting up an effective “servers as cattle” solution, like discovery and load-balancing systems (so that your application, which moves around the datacenter, can be accessed effectively). Because this book is less about building a full CaaS infrastructure and more about how such an infrastructure relates to the art of software engineering, we won’t go into more detail here.
 >
-> 12 请注意，除了分布式状态，建立一个有效的 "服务器即牛 "解决方案还有其他要求，比如发现和负载平衡系统（以便你的应用程序，在数据中心内移动，可以被有效访问）。因为这本书与其说是关于建立一个完整的CaaS基础设施，不如说是关于这样的基础设施与软件工程艺术的关系，所以我们在这里就不多说了。
+> 12 请注意，除了分布式状态，建立一个有效的 "服务器即家畜 "解决方案还有其他要求，比如发现和负载平衡系统（以便你的应用程序，在数据中心内移动，可以被有效访问）。因为这本书与其说是关于建立一个完整的CaaS基础设施，不如说是关于这样的基础设施与软件工程艺术的关系，所以我们在这里就不多说了。
 >
 > [^13]: See, for example, Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung, “The Google File System,” Proceedings of the 19th ACM Symposium on Operating Systems, 2003; Fay Chang et al., “Bigtable: A Distributed Storage System for Structured Data,” 7th USENIX Symposium on Operating Systems Design and Implementation (OSDI); or James C. Corbett et al., “Spanner: Google’s Globally Distributed Database,” OSDI, 2012.
 >
@@ -442,7 +442,7 @@ In 2003, the Borg project was started, aiming (and eventually succeeding at) bui
 
 The first one is that serving machines became cattle (the way the Borg design doc put it: “*Machines are anonymous:* programs don’t care which machine they run on as long as it has the right characteristics”). If every team managing a serving job must manage their own pool of machines (their own cluster), the same organizational overhead of maintaining and administering that pool is applied to every one of these teams. As time passes, the management practices of these pools will diverge over time, making company-wide changes (like moving to a new server architecture, or switching datacenters) more and more complex. A unified management infrastructure—that is, a *common* compute service for all the workloads in the organization—allows Google to avoid this linear scaling factor; there aren’t *n* different management practices for the physical machines in the fleet, there’s just Borg.[^16]
 
-第一个是，服务于机器的人变成了牛（Borg设计文档是这样说的。"*机器是透明的：*程序并不关心它们在哪台机器上运行，只要它有正确的特征"）。如果每个管理服务工作的团队都必须管理他们自己的机器资源池（他们自己的集群），那么维护和管理这个机器资源池的组织开销也同样适用于这些团队中的每个人。随着时间的推移，这些机器资源池的管理实践会随着时间的推移而产生分歧，使整个公司范围内的变化（如转移到一个新的服务器架构，或切换数据中心）变得越来越复杂。一个统一的管理基础设施--也就是一个适用于组织中所有工作负载的*通用*计算服务--允许谷歌避免这种线性扩展因素；对于机群中的物理机器没有*N*种不同的管理实践，只有Borg。
+第一个是，服务于机器的人变成了家畜（Borg设计文档是这样说的。"*机器是透明的：*程序并不关心它们在哪台机器上运行，只要它有正确的特征"）。如果每个管理服务工作的团队都必须管理他们自己的机器资源池（他们自己的集群），那么维护和管理这个机器资源池的组织开销也同样适用于这些团队中的每个人。随着时间的推移，这些机器资源池的管理实践会随着时间的推移而产生分歧，使整个公司范围内的变化（如转移到一个新的服务器架构，或切换数据中心）变得越来越复杂。一个统一的管理基础设施--也就是一个适用于组织中所有工作负载的*通用*计算服务--允许谷歌避免这种线性扩展因素；对于机群中的物理机器没有*N*种不同的管理实践，只有Borg。
 
 The second one is more subtle and might not be applicable to every organization, but it was very relevant to Google. The distinct needs of batch and serving jobs turn out to be complementary. Serving jobs usually need to be overprovisioned because they need to have capacity to serve user traffic without significant latency decreases, even in the case of a usage spike or partial infrastructure outage. This means that a machine running only serving jobs will be underutilized. It’s tempting to try to take advantage of that slack by overcommitting the machine, but that defeats the purpose of the slack in the first place, because if the spike/outage does happen, the resources we need will not be available.
 
@@ -450,7 +450,7 @@ The second one is more subtle and might not be applicable to every organization,
 
 However, this reasoning applies only to serving jobs! If we have a number of serving jobs on a machine and these jobs are requesting RAM and CPU that sum up to the total size of the machine, no more serving jobs can be put in there, even if real utilization of resources is only 30% of capacity. But we *can* (and, in Borg, will) put batch jobs in the spare 70%, with the policy that if any of the serving jobs need the memory or CPU, we will reclaim it from the batch jobs (by freezing them in the case of CPU or killing in the case of RAM). Because the batch jobs are interested in throughput (measured in aggregate across hundreds of workers, not for individual tasks) and their individual replicas are cattle anyway, they will be more than happy to soak up this spare capacity of serving jobs.
 
-然而，这种推理仅适用于服务作业！如果我们在一台机器上有许多服务作业，而这些作业请求的RAM和CPU总计为机器的总和，即使资源的实际利用率仅为容量的30%，也不能在其中放置更多的服务作业。但我们可以（而且，在Borg，我们）将批处理作业放在备用70%中，策略是，如果任何服务作业需要内存或CPU，我们将从批处理作业中回收（在CPU的情况下冻结它们，在RAM的情况下杀死它们）。因为批处理作业对吞吐量感兴趣（在数百名worker中进行聚合测量，而不是针对单个任务），而且它们的单个副本无论如何都是牛，所以它们将非常乐意吸收服务作业的这一剩余容量。
+然而，这种推理仅适用于服务作业！如果我们在一台机器上有许多服务作业，而这些作业请求的RAM和CPU总计为机器的总和，即使资源的实际利用率仅为容量的30%，也不能在其中放置更多的服务作业。但我们可以（而且，在Borg，我们）将批处理作业放在备用70%中，策略是，如果任何服务作业需要内存或CPU，我们将从批处理作业中回收（在CPU的情况下冻结它们，在RAM的情况下杀死它们）。因为批处理作业对吞吐量感兴趣（在数百名worker中进行聚合测量，而不是针对单个任务），而且它们的单个副本无论如何都是家畜，所以它们将非常乐意吸收服务作业的这一剩余容量。
 
 Depending on the shape of the workloads in a given pool of machines, this means that either all of the batch workload is effectively running on free resources (because we are paying for them in the slack of serving jobs anyway) or all the serving workload is effectively paying for only what they use, not for the slack capacity they need for failure resistance (because the batch jobs are running in that slack). In Google’s case, most of the time, it turns out we run batch effectively for free.
 
@@ -474,7 +474,7 @@ Earlier, we discussed a number of requirements that a compute service must satis
 
 For the aforementioned efficiency reasons, Borg covers both batch and serving jobs, but multiple compute offerings split the two concepts—typically, a shared pool of machines for batch jobs, and dedicated, stable pools of machines for serving jobs. Regardless of whether the same compute architecture is used for both types of jobs, however, both groups benefit from being treated like cattle.
 
-出于上述效率原因，Borg同时涵盖了批处理和服务作业，但多个计算产品将这两个概念分割开来--通常情况下，批处理作业使用共享的机器资源池，而服务工作使用专用的、稳定的机器资源池。然而，无论这两类工作是否使用相同的计算架构，这两类工作都会因被当作牛一样对待而受益。
+出于上述效率原因，Borg同时涵盖了批处理和服务作业，但多个计算产品将这两个概念分割开来--通常情况下，批处理作业使用共享的机器资源池，而服务工作使用专用的、稳定的机器资源池。然而，无论这两类工作是否使用相同的计算架构，这两类工作都会因被当作家畜一样对待而受益。
 
 ### Submitted Configuration 提交配置
 
@@ -514,7 +514,7 @@ It’s unlikely any organization will go down the path that Google went, buildin
 
 However, most organizations will *choose* a compute service, just as Google did internally. Note that a compute infrastructure has a high lock-in factor. One reason for that is because code will be written in a way that takes advantage of all the properties of the system (Hyrum’s Law); thus, for instance, if you choose a VM-based offering, teams will tweak their particular VM images; and if you choose a specific container- based solution, teams will call out to the APIs of the cluster manager. If your architecture allows code to treat VMs (or containers) as pets, teams will do so, and then a move to a solution that depends on them being treated like cattle (or even different forms of pets) will be difficult.
 
-然而，大多数组织会*选择一个计算服务*，就像谷歌内部那样。请注意，计算基础设施有一个很高的锁定因素。其中一个原因是，代码的编写方式将充分利用系统的所有特性（海勒姆定律）；因此，例如，如果你选择了一个基于虚拟机的产品，团队将调整他们特定的虚拟机镜像；如果你选择了一个特定的基于容器的解决方案，团队将调用集群管理器的API。如果你的架构允许代码将虚拟机（或容器）视为宠物，那么团队将这样做，然后转向一种解决方案，将它们视为牛（甚至不同形式的宠物）将是困难的。
+然而，大多数组织会*选择一个计算服务*，就像谷歌内部那样。请注意，计算基础设施有一个很高的锁定因素。其中一个原因是，代码的编写方式将充分利用系统的所有特性（海勒姆定律）；因此，例如，如果你选择了一个基于虚拟机的产品，团队将调整他们特定的虚拟机镜像；如果你选择了一个特定的基于容器的解决方案，团队将调用集群管理器的API。如果你的架构允许代码将虚拟机（或容器）视为宠物，那么团队将这样做，然后转向一种解决方案，将它们视为家畜（甚至不同形式的宠物）将是困难的。
 
 To show how even the smallest details of a compute solution can end up locked in, consider how Borg runs the command that the user provided in the configuration. In most cases, the command will be the execution of a binary (possibly followed by a number of arguments). However, for convenience, the authors of Borg also included the possibility of passing in a shell script; for example, while true; do ./ my_binary; done.[^17] However, whereas a binary execution can be done through a simple fork-and-exec (which is what Borg does), the shell script needs to be run by a shell like Bash. So, Borg actually executed /usr/bin/bash -c $USER_COMMAND, which works in the case of a simple binary execution as well.
 
@@ -550,7 +550,7 @@ From the point of view of management overhead of the compute stack (and also fro
 
 However, a growing organization will have increasingly diverse needs. For instance, when Google launched the Google Compute Engine (the “VM as a Service” public cloud offering) in 2012, the VMs, just as most everything else at Google, were managed by Borg. This means that each VM was running in a separate container controlled by Borg. However, the “cattle” approach to task management did not suit Cloud’s workloads, because each particular container was actually a VM that some particular user was running, and Cloud’s users did not, typically, treat the VMs as cattle.[^18]
 
-然而，一个不断发展的组织将有越来越多样化的需求。例如，当谷歌在2012年推出谷歌计算引擎（“虚拟机即服务”公共云产品）时，这些虚拟机与谷歌的大多数其他产品一样，都是Borg设计的。这意味着每个虚拟机都在 Borg 控制的单独容器中运行。然而，任务管理的“牛”方法并不适合云的工作负载，因为每个特定容器实际上是某个特定用户正在运行的VM，而云的用户通常不会将VM视为牛。
+然而，一个不断发展的组织将有越来越多样化的需求。例如，当谷歌在2012年推出谷歌计算引擎（“虚拟机即服务”公共云产品）时，这些虚拟机与谷歌的大多数其他产品一样，都是Borg设计的。这意味着每个虚拟机都在 Borg 控制的单独容器中运行。然而，任务管理的“家畜”方法并不适合云的工作负载，因为每个特定容器实际上是某个特定用户正在运行的VM，而云的用户通常不会将VM视为家畜。
 
 Reconciling this difference required considerable work on both sides. The Cloud organization made sure to support live migration of VMs; that is, the ability to take a VM running on one machine, spin up a copy of that VM on another machine, bring the copy to be a perfect image, and finally redirect all traffic to the copy, without causing a noticeable period when service is unavailable.[^19] Borg, on the other hand, had to be adapted to avoid at-will killing of containers containing VMs (to provide the time to migrate the VM’s contents to the new machine), and also, given that the whole migration process is more expensive, Borg’s scheduling algorithms were adapted to optimize for decreasing the risk of rescheduling being needed.[^20] Of course, these modifications were rolled out only for the machines running the cloud workloads, leading to a (small, but still noticeable) bifurcation of Google’s internal compute offering.
 
@@ -604,11 +604,11 @@ Of course, it is not that simple. The landscape here is complex, with multiple o
 
 In Google’s experience, the choice of managing cattle (and not pets) is the solution to managing at scale. To reiterate, if each of your teams will need just one pet machine in each of your datacenters, your management costs will rise superlinearly with your organization’s growth (because both the number of teams *and* the number of datacenters a team occupies are likely to grow). And after the choice to manage cattle is made, containers are a natural choice for management; they are lighter weight (implying smaller resource overheads and startup times) and configurable enough that should you need to provide specialized hardware access to a specific type of workload, you can (if you so choose) allow punching a hole through easily.
 
-根据谷歌的经验，选择管理牛（而不是宠物）是规模管理的解决方案。重申一下，如果你的每个团队在每个数据中心只需要一台宠物机，那么你的管理成本将随着你的组织的增长而呈超线性上升（因为团队的数量*和*一个团队所占用的数据中心的数量都可能增长）。而在选择了管理牛之后，容器是管理的自然选择；它们的重量更轻（意味着更小的资源开销和启动时间），而且可配置，如果你需要为特定类型的工作负载提供专门的硬件访问，你可以（如果你选择的话）允许轻松透传通过。
+根据谷歌的经验，选择管理家畜（而不是宠物）是规模管理的解决方案。重申一下，如果你的每个团队在每个数据中心只需要一台宠物机，那么你的管理成本将随着你的组织的增长而呈超线性上升（因为团队的数量*和*一个团队所占用的数据中心的数量都可能增长）。而在选择了管理家畜之后，容器是管理的自然选择；它们的重量更轻（意味着更小的资源开销和启动时间），而且可配置，如果你需要为特定类型的工作负载提供专门的硬件访问，你可以（如果你选择的话）允许轻松透传通过。
 
 The advantage of VMs as cattle lies primarily in the ability to bring our own operating system, which matters if your workloads require a diverse set of operating systems to run. Multiple organizations will also have preexisting experience in managing VMs, and preexisting configurations and workloads based on VMs, and so might choose to use VMs instead of containers to ease migration costs.
 
-虚拟机作为牛的优势主要在于能够带来我们自己的操作系统，如果你的工作环境需要一组不同的操作系统来运行，这一点很重要。多个组织在管理虚拟机、基于虚拟机的现有配置和工作负载方面也有经验，因此可能会选择使用虚拟机而不是容器来降低迁移成本。
+虚拟机作为家畜的优势主要在于能够带来我们自己的操作系统，如果你的工作环境需要一组不同的操作系统来运行，这一点很重要。多个组织在管理虚拟机、基于虚拟机的现有配置和工作负载方面也有经验，因此可能会选择使用虚拟机而不是容器来降低迁移成本。
 
 #### What is serverless? 什么是无服务器？
 
@@ -626,7 +626,7 @@ However, if multiple different teams are using the same framework, a different a
 
 Most discussions of serverless frameworks compare them to the “VMs as pets” model. In this context, the serverless concept is a true revolution, as it brings in all of the benefits of cattle management—autoscaling, lower overhead, lack of explicit provisioning of servers. However, as described earlier, the move to a shared, multitenant,cattle-based model should already be a goal for an organization planning to scale; and so the natural comparison point for serverless architectures should be “persistent containers” architecture like Borg, Kubernetes, or Mesosphere.
 
-大多数关于无服务器框架的讨论都将其与 "虚拟机作为宠物 "的模式相比较。在这种情况下，无服务器概念是一场真正的革命，因为它带来了牛群管理的所有好处--自动扩展、较低的开销、缺乏明确的服务器配置。然而，正如前文所述，对于计划扩展的组织来说，转向共享、多租户、基于牛的模式应该已经是一个目标；因此，无服务器架构的自然比较点应该是 "持久性容器 "架构，如Borg、Kubernetes或Mesosphere。
+大多数关于无服务器框架的讨论都将其与 "虚拟机作为宠物 "的模式相比较。在这种情况下，无服务器概念是一场真正的革命，因为它带来了家畜群管理的所有好处--自动扩展、较低的开销、缺乏明确的服务器配置。然而，正如前文所述，对于计划扩展的组织来说，转向共享、多租户、基于家畜的模式应该已经是一个目标；因此，无服务器架构的自然比较点应该是 "持久性容器 "架构，如Borg、Kubernetes或Mesosphere。
 
 > [^23]: FaaS (Function as a Service) and PaaS (Platform as a Service) are related terms to serverless. There are differences between the three terms, but there are more similarities, and the boundaries are somewhat blurred.
 >
@@ -722,11 +722,11 @@ Over the course of building, refining, and running its compute infrastructure, G
 
 Utilizing a container-based architecture well requires designing applications to use the “cattle” model: engineering your application to consist of nodes that can be easily and automatically replaced allows scaling to thousands of instances. Writing software to be compatible with that model requires different thought patterns; for example, treating all local storage (including disk) as ephemeral and avoiding hardcoding hostnames.
 
-充分利用基于容器的体系结构需要设计使用“牛”模型的应用程序：将应用程序设计为由可以轻松自动替换的节点组成，从而可以扩展到数千个实例。编写与该模型兼容的软件需要不同的思维模式；例如，将所有本地存储（包括磁盘）视为短暂的，并避免硬编码主机名。
+充分利用基于容器的体系结构需要设计使用“家畜”模型的应用程序：将应用程序设计为由可以轻松自动替换的节点组成，从而可以扩展到数千个实例。编写与该模型兼容的软件需要不同的思维模式；例如，将所有本地存储（包括磁盘）视为短暂的，并避免硬编码主机名。
 
 That said, although Google has, overall, been both satisfied and successful with its choice of architecture, other organizations will choose from a wide range of compute services—from the “pets” model of hand-managed VMs or machines, through “cattle” replicated containers, to the abstract “serverless” model, all available in managed and open source flavors; your choice is a complex trade-off of many factors.
 
-这就是说，尽管谷歌总体上对其架构的选择感到满意并取得了成功，但其他组织将从一系列计算服务中进行选择，从手工管理的虚拟机或机器的“宠物”模型，通过“牛”复制容器，到抽象的“无服务器”模型，所有版本都有托管和开源版本；你的选择是许多因素的复杂权衡。
+这就是说，尽管谷歌总体上对其架构的选择感到满意并取得了成功，但其他组织将从一系列计算服务中进行选择，从手工管理的虚拟机或机器的“宠物”模型，通过“家畜”复制容器，到抽象的“无服务器”模型，所有版本都有托管和开源版本；你的选择是许多因素的复杂权衡。
 
 ## TL;DRs  内容提要
 
